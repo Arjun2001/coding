@@ -1,0 +1,21 @@
+test=int(input())
+while(test):
+    n=int(input())
+    a=list(map(int,input().split()))
+    mins=999
+    maxs=1
+    temp=1
+    for i in range(n-1):
+        if((a[i+1]-a[i])<=2):
+            temp+=1
+            if(temp>maxs):
+                maxs=temp
+        else:
+            if(temp<mins):
+                mins=temp
+            temp=1
+        if(i==n-2):
+            if(temp<mins):
+                mins=temp
+    print(mins,maxs)
+    test-=1

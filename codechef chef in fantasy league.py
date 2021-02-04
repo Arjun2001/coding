@@ -1,0 +1,19 @@
+test=int(input())
+while(test):
+    n,s=list(map(int,input().split()))
+    p=list(map(int,input().split()))
+    a=list(map(int,input().split()))
+    mina=mind=999
+    for i in range(n):
+        if(a[i]==0):
+            if(mind>p[i]):
+                mind=p[i]
+        else:
+            if(mina>p[i]):
+                mina=p[i]
+    s=s+mina+mind
+    if(s>=101):
+        print("no")
+    else:
+        print("yes")
+    test-=1
